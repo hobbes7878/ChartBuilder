@@ -69,7 +69,7 @@ var defaultGneissChartConfig = {
 		},
 		{
 			name: "ChartBuilder",
-			data: [7,11,13,15],
+			data: [1,1,3,15],
 			source: "Some Org",
 			type: "line",
 			axis: 0,
