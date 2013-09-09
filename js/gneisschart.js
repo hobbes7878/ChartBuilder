@@ -24,7 +24,7 @@ var defaultGneissChartConfig = {
 	container: "#chartContainer", //css id of target chart container
 	editable: true, // reserved for enabling or dissabling on chart editing
 	legend: true, // whether or not there should be a legend
-	title: "", // the chart title 
+	title: "Charts published by thedetail.tv", // the chart title 
 	colors: ["#ff4cf4","#ffb3ff","#e69ce6","#cc87cc","#b373b3","#995f99","#804c80","#665266","#158eff","#99cdff","#9cc2e6","#87abcc","#7394b3","#5f7d99","#466780","#525c66"], //this is the order of colors that the 
 	padding :{
 		top: 25,
@@ -60,16 +60,16 @@ var defaultGneissChartConfig = {
 	],
 	series: [
 		{
-			name: "apples",
-			data: [5.5,10.2,6.1,3.8],
+			name: "Excel",
+			data: [15,12,9,1],
 			source: "Some Org",
 			type: "line",
 			axis: 0,
 			color: null
 		},
 		{
-			name: "oranges",
-			data: [23,10,13,7],
+			name: "ChartBuilder",
+			data: [7,11,13,15],
 			source: "Some Org",
 			type: "line",
 			axis: 0,
@@ -78,8 +78,8 @@ var defaultGneissChartConfig = {
 	],
 	xAxisRef: [
 		{
-			name: "names",
-			data: ["juicyness","color","flavor","travelability"]
+			name: "Years",
+			data: ["2011","2012","2013","2014"]
 		}
 	],
 	sourceline: "",
