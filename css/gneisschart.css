@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Cutive);
+@font-face{
+	font-family:urwGothic;
+	src:url('urw_gothic.ttf');
+}
+
+svg #ground {
+	fill: #fff;
+	stroke: none;
+}
+
+svg .axis line {
+	fill: none;
+	shape-rendering: crispEdges;
+}
+
+svg .axis g.zero line {
+		stroke: #666666;
+}
+
+svg #xAxis line {
+	stroke: #e6e6e6;
+}
+
+svg #xAxis{
+	fill: #666666;
+}
+
+svg .axis path {
+	stroke: none;
+	fill: none;
+}
+
+svg .axis text {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 12px;
+}
+
+svg .legendItem text {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size:  12px;
+}
+
+svg text.metaText {
+	font: italic 12px Futura, "Trebuchet MS", Arial, sans-serif;
+	text-rendering:   optimizeLegibility;
+	fill:  #000000;
+}
+
+svg text.barLabel, 
+svg text.bargridLabel {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 12px
+}
+
+#titleLine {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 20px;
+	fill: #000;
+}
+
+#creditLine{
+	font: normal bold 16px urwGothic;
+	text-rendering:   optimizeLegibility;
+	fill:  #000000;
+}
+#creditLine tspan{
+	fill:red;
+};
