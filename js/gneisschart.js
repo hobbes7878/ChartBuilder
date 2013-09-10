@@ -1031,6 +1031,7 @@ var Gneiss = {
 					.attr("y",function(d,i) {return g.xAxis.scale(i) + 5})
 				
 				//remove non bargrid stuff
+				columnGroups.selectAll("text.columnLabel").remove()
 				scatterSeries.remove()
 				columnRects.exit().remove()
 				lineSeriesDotGroups.remove()
@@ -1068,6 +1069,7 @@ var Gneiss = {
 						.attr("height", function(d,i) {yAxisIndex = d3.select(this.parentElement).data()[0].axis; return Math.abs(g.yAxis[yAxisIndex].scale(d) - g.yAxis[yAxisIndex].scale(Gneiss.helper.columnXandHeight(d,g.yAxis[yAxisIndex].scale.domain())))})
 						.attr("x",function(d,i) {return g.xAxis.scale(Gneiss.g.xAxisRef[0].data[i])  - columnWidth/2})
 						.attr("y",function(d,i) {yAxisIndex = d3.select(this.parentElement).data()[0].axis; return (g.yAxis[yAxisIndex].scale(d)-g.yAxis[yAxisIndex].scale(Gneiss.helper.columnXandHeight(d,g.yAxis[yAxisIndex].scale.domain()))) >= 0 ? g.yAxis[yAxisIndex].scale(Gneiss.helper.columnXandHeight(d,g.yAxis[yAxisIndex].scale.domain())) : g.yAxis[yAxisIndex].scale(d)})
+						
 			
 				columnRects.transition()
 					.duration(500)
@@ -1079,6 +1081,8 @@ var Gneiss = {
 					)
 					.attr("y",function(d,i) {yAxisIndex = d3.select(this.parentElement).data()[0].axis; return (g.yAxis[yAxisIndex].scale(d)-g.yAxis[yAxisIndex].scale(Gneiss.helper.columnXandHeight(d,g.yAxis[yAxisIndex].scale.domain()))) >= 0 ? g.yAxis[yAxisIndex].scale(Gneiss.helper.columnXandHeight(d,g.yAxis[yAxisIndex].scale.domain())) : g.yAxis[yAxisIndex].scale(d)})
 				
+
+
 				columnRects.exit().remove()
 			
 				//add lines
