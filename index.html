@@ -191,22 +191,25 @@
 
 
 		//This loads the webfonts and starts Chartbuilder once they're present
-		WebFont.load({
+/*		WebFont.load({
 			custom: {
-				families: ["Cutive"]
+				families: ["Cutive","Montserrat","Raleway","Francois One"]
 			},
 		    active: function(name) {
 		        $(document).ready(function() {
 		            ChartBuilder.start();
 		        });
 		    }
-		});
+		});*/
+
+
 		</script>
   <script>
-  setTimeout(delayed, 500);
-
+  setTimeout(ChartBuilder.start(), 700);
+  setTimeout(delayed, 1000);
 
   function delayed(){
+    
   var sourceText = document.getElementById("sourceText")
     attributeText = document.getElementById("attributeText");
 
