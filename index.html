@@ -193,7 +193,7 @@
 		//This loads the webfonts and starts Chartbuilder once they're present
 		WebFont.load({
 			custom: {
-				families: ["Cutive","Montserrat","Raleway","Francois One"]
+				families: ["Cutive"]
 			},
 		    active: function(name) {
 		        $(document).ready(function() {
@@ -202,21 +202,21 @@
 		    }
 		});
 		</script>
-<script>
-setTimeout(delayed, 500);
+  <script>
+  setTimeout(delayed, 500);
 
 
-function delayed(){
-var sourceText = document.getElementById("sourceText")
-  attributeText = document.getElementById("attributeText");
+  function delayed(){
+  var sourceText = document.getElementById("sourceText")
+    attributeText = document.getElementById("attributeText");
 
-    sourceText.innerHTML = sourceText.innerHTML.replace(/Dallas Morning News/g, '<tspan style="font-style: italic; font-size:11px;">Dallas Morning News</tspan>');
+      sourceText.innerHTML = sourceText.innerHTML.replace(/Dallas Morning News/g, '<tspan style="font-style: italic; font-size:11px;">Dallas Morning News</tspan>');
 
 
-    attributeText.innerHTML = attributeText.innerHTML.replace(/dallasnews.com/g, 'dallas<tspan style="font-family:serif; font-size:12px;">news</tspan>.com');
+      attributeText.innerHTML = attributeText.innerHTML.replace(/dallasnews.com/g, 'dallas<tspan style="font-family:serif; font-size:12px;">news</tspan>.com');
 
-}
- 
-</script>
+  }
+   
+  </script>
 	</body>
 </html>
