@@ -1,11 +1,24 @@
-@import url(http://fonts.googleapis.com/css?family=Cutive);
-@font-face{
-	font-family:urwGothic;
-	src:url('urw_gothic.ttf');
+/* 
+// Make sure to change the name of the font 
+// in the webfont.js loader in index.html
+*/
+@import url(http://fonts.googleapis.com/css?family=Cutive); 
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+
+svg {
+	font-size: 14px;
 }
 
 svg #ground {
 	fill: #fff;
+	stroke: none;
+}
+
+svg #plotArea {
+	fill: none;
 	stroke: none;
 }
 
@@ -15,11 +28,12 @@ svg .axis line {
 }
 
 svg .axis g.zero line {
-		stroke: #666666;
+		stroke: black;
 }
 
 svg #xAxis line {
-	stroke: #e6e6e6;
+	stroke: #444444;
+	stroke-width:2px;
 }
 
 svg #xAxis{
@@ -32,38 +46,49 @@ svg .axis path {
 }
 
 svg .axis text {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	font-size: 12px;
+	font-family: "Raleway", sans-serif;
+	font-size:12px;
+	fill:#444444;
 }
 
 svg .legendItem text {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	font-size:  12px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	fill:#333333;
 }
 
 svg text.metaText {
-	font: italic 12px Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-size:  10px;
 	text-rendering:   optimizeLegibility;
-	fill:  #000000;
+	font-weight: normal;
+	fill:#333333;
 }
 
 svg text.barLabel, 
 svg text.bargridLabel {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	font-size: 12px
+	font-family: 'Montserrat', sans-serif;
 }
 
+/*Default styling of series*/
+
+svg path.seriesLine {
+	stroke-width: 3px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	fill: none;
+}
+
+svg .seriesScatter circle {
+	stroke:#fff;
+	stroke-width":1;
+}
+	
 #titleLine {
-	font-family: Georgia, Times, "Times New Roman", serif;
-	font-size: 20px;
-	fill: #000;
-}
+	font-family: 'Roboto Condensed', sans-serif;
+	fill: black;
+	font-weight:700;
+	letter-spacing: -.2px;
 
-#creditLine{
-	font: normal bold 16px urwGothic;
-	text-rendering:   optimizeLegibility;
-	fill:  #000000;
+	font-size:18pt;
 }
-#creditLine tspan{
-	fill:red;
-};
