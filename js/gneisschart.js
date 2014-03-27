@@ -79,7 +79,7 @@ Gneiss.defaultGneissChartConfig = {
 	series: [
 		{
 			name: "American",
-			data: [5.5,10.2,6.1,3.8],
+			data: [28.69, 27.93,28.07,32.33,33.82,31.35,30.75,29.99,24.4,25.5,30.51,28.1],
 			source: "Some Org",
 			type: "line",
 			axis: 0,
@@ -87,15 +87,15 @@ Gneiss.defaultGneissChartConfig = {
 		},
 		{
 			name: "Southwest",
-			data: [23,10,13,7],
+			data: [20.25,18.04,17.21,17.66,19.39,17.93,19.41,17.36,14.4,15.43,18.19,17.93],
 			source: "Some Org",
 			type: "line",
 			axis: 0,
 			color: null
 		},
 		{
-			name: "Delta",
-			data: [4.5,7.2,-2.1,-8.8],
+			name: "Int'l Consol.",
+			data: [32.22,27.41,21.72,24.04,25.52,23.22,23.07,21.22,12.67,10.23,14.32,14.03],
 			source: "Some Org",
 			type: "line",
 			axis: 0,
@@ -105,7 +105,7 @@ Gneiss.defaultGneissChartConfig = {
 	xAxisRef: [
 		{
 			name: "date",
-			data: ["12/1/2013","1/1/2014","2/1/2014","3/1/2014"]
+			data: ["1/1/2001","2/1/2001","3/1/2001","4/1/2001","5/1/2001","6/1/2001","7/1/2001","8/1/2001","9/1/2001","10/1/2001","11/1/2001","12/1/2001"]
 		}
 	],
 	sourceline: "SOURCE: Dallas Morning News Analysis",
@@ -149,7 +149,7 @@ Gneiss.dateParsers = {
   "M": function(d) {
     var month = d.getMonth() + 1;
     if(month == 1) {
-	    return d.format('{Mon}.') +" "+ String(d.getFullYear());
+	    return String(d.getFullYear());
     }
     else if(month == 5) {
       return d.format('{Mon}');

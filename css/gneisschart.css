@@ -8,6 +8,45 @@
 @import url(http://fonts.googleapis.com/css?family=Francois+One);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+/* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */  
+  #warnoff{
+  	display:none;
+  }
+
+}
+#warnoff{
+	background-color: #800000;
+	color:white;
+	padding: 10px;
+	font-size: 14px;
+	margin: 15px 10px;
+}
+.miniLogo{
+	width:40px;
+	margin-right: 7px;
+	float:left;
+
+}
+#chrome{
+	margin-top:8px;
+}
+.splainer{
+	margin:-15px 2px 10px;
+	font-size:10px;
+	padding:2px;
+}
+#preview{
+	padding:5px;
+	font-style: italic;
+}
+#intro{
+	margin-top:-10px;
+	font: 14px "Times New Roman",serif;
+
+}
+
+
 svg {
 	font-size: 14px;
 }

@@ -40,18 +40,34 @@
 			<div id="rightColumn" class="column">
 			  <div class="cbInner">
         <img src="dmn_flag.png" style="width:500px;">
+        <div id="warnoff">
+        <img class="miniLogo" id="chrome" style="" src="chrome.png" >
+        <img class="miniLogo" src="apple.png" >
+        Currently, ChartBuilder is only fully functional in Google Chrome or Apple Safari browsers. It is recommended you create your charts from one of these browsers. Of course, after you've exported your chart image, you can upload it to your blog via whatever your browser preference.
+
+        
+        </div>
+          <hr>
+
 			    <h1>ChartBuilder </h1>
           
+          <div id="intro">
+          <p>Don't leave good data in your notebook. ChartBuilder is a tool for reporters. It helps quickly turn otherwise-unused data into style-compliant, web-friendly charts that can supplement blogs or social media posts. Not every chart can or should be built with ChartBuilder, but in a majority of cases, simple bar, line or scatter plot charts can be created, exported and posted on deadline as easily as Copy/Paste.
+          </p>
+          </div>
+          <hr>
 			  
   				<div id="chartOptions" class="interfaceCol">
              <div id="datainput">
              	<div class="inputGroup">
                 <h2>1. Paste your data from Excel</h2>
+                <div class="splainer">Include column names. If your data has a date column, make sure it's titled "Date".</div>
                 <span id="invalidDataSpan" class="hide">Warning: Data is Invalid</span>
                 <textarea id="csvInput" class="input-box" name="csvInput" rows="8"></textarea>
              	</div>
-             	<div class="inputGroup">
-             		<h4>If your data was parsed correctly, it will be formatted below:</h4>
+             	<div class="inputGroup" id="preview">
+               <h2>Data Preview</h2>
+             		<div class="splainer">If ChartBuilder was able to parse your data, it will be formatted correctly below:</div>
                 <div id="dataTable" class="input-box">
                   <table border=0>
                     <tr><th>Header</th></tr>
@@ -64,6 +80,9 @@
 
             <div class="optionBlock topOptionBlock">
               <h2>2. Series Options</h2>
+              <div class="splainer">
+              Choose a color and geometry type for each series class. The small checkboxes at right create an independent axis for the series class. Generally, leave these unchecked. 
+              </div>
               <div id="seriesItems"></div>
             </div>
   					
@@ -102,7 +121,7 @@
     					<div class="optionBlock">
     					<h2>5. Bottom Axis Options</h2>
 						<div class="optionGroup showonlywith-date">
-							<label for="x_axis_tick_date_frequency">Tick date frequency</label><select name="x_axis_tick_date_frequency" id="x_axis_tick_date_frequency" size="1">
+							<label for="x_axis_tick_date_frequency">Tick Date Frequency</label><select name="x_axis_tick_date_frequency" id="x_axis_tick_date_frequency" size="1">
 								<option selected>auto</option>
 								<option>1 hour</option>
 								<option>1 day</option>
@@ -135,7 +154,7 @@
               <div class="optionGroup showonlywith-ordinal">No options available</div>
             </div>
             <div class="optionBlock full">
-              <h2>4. Export</h2>
+              <h2>Export the Chart</h2>
               <div class="updateButton" id="createImageButton">
                 <p>Create Image of Chart</p>
               </div>
@@ -144,8 +163,8 @@
                 <a download="new_chart.svg" id="downloadSVGLink" class="downloadLink" href="#" target="_blank">Download&nbsp;SVG&nbsp;of&nbsp;Chart</a>
               </div>
             </div>
-            <div class="optionBlock full">
-              <h4>5. Copy the HTML table of your data (if you want)</h4>
+          <!--   <div class="optionBlock full">
+              <h4>A copy of the HTML table of your data (if needed)</h4>
               <textarea  class="input-box"  id="table-html" type="text" rows="10"></textarea>
               
               <div class="previousCharts hide">
@@ -153,7 +172,8 @@
                   <select name="previous_charts" id="previous_charts"></select>
                 </div>
               </div>
-            </div>
+            </div> -->
+
             <div class="clearfix"></div>
   				</div>
   				
@@ -163,6 +183,13 @@
       <div id="blankColumn" class="column">
         
 
+      </div>
+      <hr style="border-top: 2px dotted; margin:0px 5px;">
+      <div style="margin:10px">
+      <img src="caution.png" style="width:50px; height:35px; float:left; margin-right:5px;"><span style="font:14.5px sans-serif; color:black;">This tool is under development. There will be bugs. Probably lots. If you find one and want to help fix it, take a screenshot and send an email to <a href="mailto:jmcclure@dallasnews.com?Subject=ChartBuilder%20Bug%20Report" target="_top">jmcclure@dallasnews.com</a>.</span>
+
+      <br><br><br><br>
+      <span style="font:italic 13px serif; color:black;">ChartBuilder was designed and built by staff at <a href="https://github.com/Quartz" target="_blank">Quartz</a> and has been made available as an open-source product under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Other changes were made by the Dallas Morning News.</span>
       </div>
       <div class="clearfix"></div>
 
@@ -210,15 +237,16 @@
 		</script>
   <script>
   setTimeout(ChartBuilder.start(), 700);
+  
+  /*DMN styling*/
   setTimeout(delayed, 1000);
 
   function delayed(){
     
   var sourceText = document.getElementById("sourceText")
-    attributeText = document.getElementById("attributeText");
-
+      attributeText = document.getElementById("attributeText");
+      
       sourceText.innerHTML = sourceText.innerHTML.replace(/Dallas Morning News/g, '<tspan style="font-style: italic; font-size:11px;">Dallas Morning News</tspan>');
-
 
       attributeText.innerHTML = attributeText.innerHTML.replace(/dallasnews.com/g, 'dallas<tspan style="font-family:serif; font-size:12px;">news</tspan>.com');
 
@@ -226,7 +254,7 @@
    
   </script>
 
-   <span style="font:italic 14px Arial; color:black; margin-left:2.5%;">ChartBuilder was designed and built by staff at <a href="https://github.com/Quartz" target="_blank">Quartz</a> and has been made available as an open-source product under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Other changes were made by the Dallas Morning News.</span>
+   
 
 
 	</body>
