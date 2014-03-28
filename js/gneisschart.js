@@ -12,9 +12,7 @@
 `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 */
 
-News_italics = function(){
-	document.getElementById("sourceText").innerHTML = document.getElementById("sourceText").innerHTML.replace(/Dallas Morning News/g, '<tspan style="font-style: italic; font-size:11px;">Dallas Morning News</tspan>');
-}
+
 
 var yAxisIndex;
 

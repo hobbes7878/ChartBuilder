@@ -1,9 +1,9 @@
 var chart;
 
-News_italics = function(){
+newsItalics = function(){
 	document.getElementById("sourceText").innerHTML = document.getElementById("sourceText").innerHTML.replace(/Dallas Morning News/g, '<tspan style="font-style: italic; font-size:11px;">Dallas Morning News</tspan>');
 }
-NewsComSerifs = function(){
+newsComSerif = function(){
 	document.getElementById("attributeText").innerHTML = document.getElementById("attributeText").innerHTML.replace(/dallasnews.com/g, 'dallas<tspan style="font-family:serif; font-size:12px;">news</tspan>.com');
 }
 
@@ -127,6 +127,8 @@ ChartBuilder = {
 
 			data.push(obj);
 		}
+
+		console.log((/date/gi).test(data[0].name));
 
 		return {data: data, datetime: (/date/gi).test(data[0].name)};
 	},
@@ -826,11 +828,13 @@ ChartBuilder.start = function(config) {
   			dataObj = ChartBuilder.mergeData(dataObj)
   			
   			if(dataObj.datetime) {
+  				console.log("FIRE")
   				chart.xAxis().type = "date";
   				chart.xAxis().formatter = chart.xAxis().formatter?chart.xAxis().formatter:"M";
   			}
   			else {
   				chart.xAxis().type = "ordinal";
+  				chart.xAxis().formatter = null
   			}
   			//TODO add a linear scale type
 
@@ -935,14 +939,14 @@ ChartBuilder.start = function(config) {
   		var val = $(this).val();
   		chart.credit(val);
   		chart.creditElement().text(chart.credit());
-  		NewsComSerifs();
+  		newsComSerif();
   	});
 		
   	$("#sourceLine").keyup(function() {
   		var val = $(this).val();
   		chart.source(val);
   		chart.sourceElement().text(chart.source());
-  		News_italics();
+  		newsItalics();
 
   	});
   	
