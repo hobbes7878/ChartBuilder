@@ -92,7 +92,7 @@ Gneiss.defaultGneissChartConfig = {
 			color: null
 		},
 		{
-			name: "Int'l Consol.",
+			name: "Int'l Consolid.",
 			data: [32.22,27.41,21.72,24.04,25.52,23.22,23.07,21.22,12.67,10.23,14.32,14.03],
 			source: "Some Org",
 			type: "line",
