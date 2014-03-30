@@ -343,7 +343,7 @@ ChartBuilder = {
 		var g = chart;
 		var s;
 		var picker;
-		this.customLegendLocaion = false;
+		this.customLegendLocation = false;
 		var colIndex = g.seriesByType().line.length;
 		var lineIndex = 0;
 		var bargridIndex = 0;
@@ -561,12 +561,12 @@ ChartBuilder = {
 			.on("dragstart",function(d){
 				elem = d3.select(this)
 				d3.select(elem[0][0].parentNode).selectAll("rect").style("display","none")
-				if(!ChartBuilder.customLegendLocaion) {
+				if(!ChartBuilder.customLegendLocation) {
 					chart.legend(false);
 					chart.redraw()
 					ChartBuilder.inlineAllStyles()
 					ChartBuilder.makeLegendAdjustable()
-					ChartBuilder.customLegendLocaion = true;
+					ChartBuilder.customLegendLocation = true;
 				}
 				
 			})
