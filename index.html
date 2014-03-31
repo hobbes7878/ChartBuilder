@@ -61,12 +61,12 @@
              <div id="datainput">
              	<div class="inputGroup">
                 <h2>1. Paste your data from Excel</h2>
-                <div class="splainer">Include column names. If your data has a date column, make sure it's titled "Date".</div>
+                <div class="splainer">Your paste should include JUST ONE row for column names and the rows of the data you want to chart. If your data has a date column, make sure it's named "Date". Reformat currency data as a raw number, without the currency symbol, for example, 2.23, not $2.23.</div>
                 <span id="invalidDataSpan" class="hide">Warning: Data is Invalid</span>
                 <textarea id="csvInput" class="input-box" name="csvInput" rows="8"></textarea>
              	</div>
              	<div class="inputGroup" id="preview">
-               <h2>Data Preview</h2>
+               <h2>Data Check</h2>
              		<div class="splainer">If ChartBuilder was able to parse your data, it will be formatted correctly below:</div>
                 <div id="dataTable" class="input-box">
                   <table border=0>
@@ -81,7 +81,7 @@
             <div class="optionBlock topOptionBlock">
               <h2>2. Series Options</h2>
               <div class="splainer">
-              Choose a color and geometry type for each series class. The small checkboxes at right create an independent axis for the series class. Generally, leave these unchecked. 
+              Choose a color and geometry type for each series class. The small checkboxes at right create an independent axis for the series class. Generally, leave these unchecked, unless you're comparing trends across different scales, for example, unemployment rate v. stimulus spending. 
               </div>
               <div id="seriesItems"></div>
             </div>
@@ -121,6 +121,9 @@
     					<div class="optionBlock">
     					<h2>5. Bottom Axis Options</h2>
 						<div class="optionGroup showonlywith-date">
+              <div class="splainer">
+              These options help format dates along the X axis.
+              </div>
 							<label for="x_axis_tick_date_frequency">Tick Date Frequency</label><select name="x_axis_tick_date_frequency" id="x_axis_tick_date_frequency" size="1">
 								<option selected>auto</option>
 								<option>1 hour</option>
