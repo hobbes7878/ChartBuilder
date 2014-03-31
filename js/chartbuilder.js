@@ -283,8 +283,8 @@ ChartBuilder = {
 	createChartImage: function() {
 		// Create PNG image
 		var canvas = document.getElementById("canvas")
-		canvas.width = $("#chartContainer").width() * 2
-		canvas.height = $("#chartContainer").height() *2
+		canvas.width = $("#chartContainer").width() 
+		canvas.height = $("#chartContainer").height()
 
 		var canvasContext = canvas.getContext("2d")
 		var svg = $.trim(document.getElementById("chartContainer").innerHTML)
