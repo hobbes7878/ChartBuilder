@@ -156,12 +156,12 @@
             <div class="optionBlock full">
               <h2>Export the Chart</h2>
               Ready to export? Does your chart tell the truth, the whole truth and nothing but the truth? If you're sure yours won't end up <a href="http://wtfviz.net/" style="text-decoration:none;" target="_blank">here</a>, <a href="http://simplystatistics.org/2012/11/26/the-statisticians-at-fox-news-use-classic-and-novel-graphical-techniques-to-lead-with-data/" style="text-decoration:none;" target="_blank">here</a> or <a href="https://visualisingadvocacy.org/blog/disinformation-visualization-how-lie-datavis" style="text-decoration:none;" target="_blank">here</a>, click below.
-              <div class="updateButton" id="createImageButton">
+              <div class="updateButton" id="createImageButton" onClick="_gaq.push(['_trackEvent', 'Charts', 'Export', 'Export',, false]);">
                 <p>Create Image of Chart</p>
               </div>
               <div id="downloadLinksDiv" class="downloadLinks hide">
-                <a download="new_chart.png" id="downloadImageLink" class="downloadLink" href="#" target="_blank">Download&nbsp;Image&nbsp;of&nbsp;Chart</a> or 
-                <a download="new_chart.svg" id="downloadSVGLink" class="downloadLink" href="#" target="_blank">Download&nbsp;SVG&nbsp;of&nbsp;Chart</a>
+                <a download="new_chart.png" id="downloadImageLink" class="downloadLink" href="#" target="_blank" onClick="_gaq.push(['_trackEvent', 'Charts', 'Export', 'Export PNG',, false]);">Download&nbsp;Image&nbsp;of&nbsp;Chart</a> or 
+                <a download="new_chart.svg" id="downloadSVGLink" class="downloadLink" href="#" target="_blank" onClick="_gaq.push(['_trackEvent', 'Charts', 'Export', 'Export SVG',, false]);">Download&nbsp;SVG&nbsp;of&nbsp;Chart</a>
               </div>
 
 
