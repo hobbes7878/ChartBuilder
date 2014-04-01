@@ -283,8 +283,16 @@ ChartBuilder = {
 	createChartImage: function() {
 		// Create PNG image
 		var canvas = document.getElementById("canvas")
-		canvas.width = $("#chartContainer").width() 
-		canvas.height = $("#chartContainer").height()
+		
+		//change for retina displays
+		if(window.devicePixelRatio > 1){
+			canvas.width = $("#chartContainer").width()*2
+			canvas.height = $("#chartContainer").height()*2
+		}else{
+			canvas.width = $("#chartContainer").width() 
+			canvas.height = $("#chartContainer").height()
+		};
+		
 
 		var canvasContext = canvas.getContext("2d")
 		var svg = $.trim(document.getElementById("chartContainer").innerHTML)
@@ -737,7 +745,10 @@ ChartBuilder.start = function(config) {
     chart = new Gneiss(chartConfig);
     
   	// Scale the chart up so the outputted image looks good on retina displays
-  	//$("#chart").attr("transform", "scale(2)");
+  	if(window.devicePixelRatio > 1){
+  		$("#chart").attr("transform", "scale(2)");
+  	};
+  	
   	
   	//populate the input with the data that is in the chart
   	$("#csvInput").val(function() {
